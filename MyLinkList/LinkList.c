@@ -7,7 +7,7 @@
 typedef struct L {
 
 	int data;
-	struct L* pNext;
+	struct L * pNext;
 
 }Lnode, * pLnode;//定义一个无名结构，并用typedef函数对其重命名
 
@@ -15,7 +15,7 @@ typedef struct L {
 pLnode init_LList(void);//初始化链表
 bool insert_LList(pLnode pHead, int pos, int num);//向链表插入元素
 bool delete_LList(pLnode pHead);//删除整个链表的所有元素
-bool delete_one_LList(pLnode pHead, int pos, int* pNum);
+bool delete_one_LList(pLnode pHead, int pos, int *pNum);
 //删除并返回链表中某个元素
 int get_LList(pLnode pHead, int pos);//获取链表某个元素
 bool show_LList(pLnode pHead);//输出整个链表
