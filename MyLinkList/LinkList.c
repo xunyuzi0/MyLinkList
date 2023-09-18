@@ -27,6 +27,31 @@ bool isEmpty_LList(pLnode pHead);//判断链表是否为空
 
 int main(void) {
 
+	int temp = 0;//临时储存被删除结点的值
+	int num = 0;//储存用户通过get函数返回的值
+
+	pLnode pHead = NULL;//创建一个链表结构的指针，作为头指针
+	pHead = init_LList();
+	show_LList(pHead);
+
+	insert_LList(pHead, 1, 400);
+	insert_LList(pHead, 2, 300);
+	insert_LList(pHead, 3, 200);
+	insert_LList(pHead, 1, 500);
+	show_LList(pHead);
+
+	if (delete_one_LList(pHead, 1, &temp))
+		printf("删除结点成功，删除的值为：%d\n", temp);
+	show_LList(pHead);
+
+	if (num = get_LList(pHead, 3)) {
+		printf("获取链表数据成功！获取的数为：%d\n",num);
+	}
+
+	if (sort_LList(pHead)) {
+		printf("链表排序成功！\n");
+	}
+	show_LList(pHead);
 	
 	return 0;
 }
